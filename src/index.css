@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wallet-adapter-button-trigger {
+  /* background: linear-gradient(#013425, #013425) padding-box, linear-gradient(135deg, rgb(0, 245, 255) 0%, rgb(0, 232, 125) 87.58%, rgb(0, 230, 106) 100%) border-box !important; */
+  /* background-color: #013425 !important; */
+  /* border: solid 2px transparent !important; */
+  /* border-radius: 5rem !important; */
+  background: #798DA3 !important;
+  color: #fff !important;
+  width: 170px;
+  justify-content: center;
+}
+.wallet-adapter-button-trigger:hover {
+  /* background: linear-gradient(135deg, rgb(0, 245, 255) 0%, rgb(0, 232, 125) 87.58%, rgb(0, 230, 106) 100%) border-box !important;
+  color: black;
+  transition: all 0.5s; */
+  background: #86FF00 !important;
+    color: #000000 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@layer base {
+  body {
+    @apply bg-primary bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat min-h-screen font-jone;
+  }
+}
+
+@font-face {
+  font-family: 'RiseAndShine';
+  src: url('https://gerbi.io/fonts/RiseShine.otf') format('opentype');
+  /* src: url('/assets/fonts/RiseShine.otf') format('opentype'); */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.rise-font {
+  font-family: 'RiseAndShine', sans-serif;
+}
