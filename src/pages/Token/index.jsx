@@ -104,7 +104,7 @@ const Token = () => {
     }
 
     return (
-        <div id="wrapper">
+        <div id="wrapper home3">
             <header id="header_main" className="header">
                 <div className="container">
                     <div id="site-header-inner" style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
@@ -137,20 +137,21 @@ const Token = () => {
                         </div>
 
                         <div className="mobile-button">
+                            <span></span>
                         </div>
                     </div>
                 </div>
             </header>
 
-            <section className="tf-section project_2 relative" style={{ padding: "100px 0px 0px 0px!important" }}>
-                <div className="overbg" style={{ position: "absolute", left: "0px", top: "100px", width: "100%", height: "100%", background: "url('./assets/images/backgroup/bg_geb.jpg')", opacity: "0.4", zIndex: "-22", backgroundRepeat: "no-repeat", backgroundPosition: "center, center", backgroundSize: "cover" }}></div>
+            <section className="tf-section project_2 relative">
+                <div className="overbg banner"></div>
                 <div className="container w_1280">
                     <div className="row">
                         <div className="tf-title pb-5" data-aos="fade-up" data-aos-duration="800" style={{ marginTop: "50px" }}>
                             <div className="mobile-wallet-container">
                                 <WalletMultiButton />
                             </div>
-                            <h2 className="title rise-font" style={{ marginTop: '100px' }}><span style={{ color: "#86FF00" }}>$GERBI</span> MemeCoin Presale</h2>
+                            <h2 className="title rise-font"><span style={{ color: "#86FF00" }}>$GERBI</span> MemeCoin Presale</h2>
                         </div>
                         <div className="col-xl-6 col-lg-6 col-md-6 col-12 d-flex justify-content-center" style={{ marginBottom: "-100px" }}>
                             <div className="wallet-form mt-5">
@@ -254,7 +255,7 @@ const Token = () => {
 
                         <div className="col-xl-6 col-lg-6 col-md-6 col-12 text-center">
                             <div className="row">
-                                <div className="col-md-12">
+                                <div className="col-md-12" style={{display: 'flex', justifyContent: 'center'}}>
                                     <img src="./assets/images/gerbicoins.png" className="img-fluid" style={{ maxHeight: "400px", width: "auto" }} />
                                 </div>
                                 <div className="col-md-12">
@@ -339,13 +340,27 @@ const Token = () => {
                             <div className="tf-title" data-aos="fade-up" data-aos-duration="800">
                                 <h2 className="title rise-font mt-5 mt-xl-1 mt-lg-1">
                                     TOKENOMICS </h2>
-                                <h4 style={{ fontSize: '28px', display: 'flex', justifyContent: 'center' }}>Total Supply: 1,000,000,000 <img src="./assets/images/gerbism2.png" style={{ width: "40px", marginTop: "-3px" }} /> $GERBI</h4>
+                                <h4 className="tokenomics flex flex-row items-center gap-1" style={{ fontSize: '28px'}}>
+                                    <div className="whitespace-nowrap text-2xl">
+                                        Total Supply:&nbsp;
+                                    </div>
+                                    <div className="text-2xl">
+                                        1,000,000,000
+                                    </div>
+                                    <img src="./assets/images/gerbism2.png" style={{ width: "40px", height: '40px', marginTop: "-3px", marginLeft: "3px"}} />
+                                    <div className="text-2xl">
+                                        $GERBI
+                                    </div>
+                                </h4>
+                                {/* <h4 className="tokenomics flex flex-row" style={{ fontSize: '28px'}}>
+                                    {"$GERBI"}
+                                </h4> */}
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="wrapper-box">
                                 <div className="icon-box-style2" style={{ width: "70%" }}>
-                                    <ul className="describe_chart">
+                                    <ul className="describe_chart flex flex-col items-start">
                                         <li className="mobili">
                                             <img src="./assets/images/col5.png" width="40px;" alt="" />
                                             <div className="desc">

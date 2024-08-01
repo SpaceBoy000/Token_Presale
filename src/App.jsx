@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./app.scss"
-import "./app/swiper/swiper-bundle.min.css";
-import "./app/dist/app.css";
+// import "./app/swiper/swiper-bundle.min.css";
+// import "./app/dist/app.css";
 
 import Sale from "./pages/Sale";
 import Token from "./pages/Token";

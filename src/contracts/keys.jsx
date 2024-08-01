@@ -11,6 +11,8 @@ import {
   ASSOCIATED_TOKEN_PROGRAM_ID
 } from "@solana/spl-token"
 
+import {Buffer} from 'buffer';
+
 export const getGlobalStateKey = async () => {
   const [globalStateKey] = await asyncGetPda(
     [Buffer.from(GLOBAL_STATE_SEED)],
