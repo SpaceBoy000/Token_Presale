@@ -456,7 +456,7 @@ const Token = () => {
                                             <img src="./assets/images/common/down.svg" alt="" />
                                         </div>
                                         <div className="content">
-                                            <h6 className="date">July 2024</h6>
+                                            <h6 className="date">August 2024</h6>
                                             <ul>
                                                 <li>Token Development: Finalize the development of the $GERBI token, ensuring robust security and functionality.</li>
                                                 <li>Launch of Presale: Initiate the first phase of our token presale, releasing 20% of the total supply at the initial price.</li>
@@ -468,7 +468,7 @@ const Token = () => {
                                             <img src="./assets/images/common/down.svg" alt="" />
                                         </div>
                                         <div className="content">
-                                            <h6 className="date">October 2024</h6>
+                                            <h6 className="date">November 2024</h6>
                                             <ul>
                                                 <li>DEX Integration: List $GERBI on major decentralized exchanges and establish liquidity pools to ensure smooth trading and liquidity.</li>
                                             </ul>
@@ -494,7 +494,7 @@ const Token = () => {
                                             <img src="./assets/images/common/down.svg" alt="" />
                                         </div>
                                         <div className="content">
-                                            <h6 className="date">September 2024</h6>
+                                            <h6 className="date">October 2024</h6>
                                             <ul>
                                                 <li>Phase #2 Presale: Commence the second phase of the token presale, introducing the next 30% of the supply at an increased price.</li>
                                                 <li>Community Engagement: Begin strategic marketing campaigns to grow and engage the $GERBI community.</li>
@@ -593,8 +593,8 @@ const Token = () => {
                                         <span>What are the phases of the $GERBI token presale?</span>
                                     </div>
                                     <p className="toggle-content" style={{ display: "none" }}>The $GERBI token presale consists of two phases:<br />
-                                        Phase 1 (July 2024): 20% of the total supply at the initial price.<br />
-                                        Phase 2 (September 2024): 30% of the total supply at a slightly higher price.
+                                        Phase 1 (August 2024): 20% of the total supply at the initial price.<br />
+                                        Phase 2 (October 2024): 30% of the total supply at a slightly higher price.
                                     </p>
                                 </div>
                                 <div className="flat-toggle">
@@ -602,7 +602,7 @@ const Token = () => {
                                         <span className="icon-Icon"> </span>
                                         <span>What will happen after the presale?</span>
                                     </div>
-                                    <p className="toggle-content" style={{ display: "none" }}>After the presale, $GERBI will be listed on major decentralized exchanges (DEXs) in October 2024 to provide liquidity and enable trading. By December 2024, we plan to list $GERBI on centralized exchanges (CEXs) to increase accessibility and market reach.</p>
+                                    <p className="toggle-content" style={{ display: "none" }}>After the presale, $GERBI will be listed on major decentralized exchanges (DEXs) in November 2024 to provide liquidity and enable trading. By December 2024, we plan to list $GERBI on centralized exchanges (CEXs) to increase accessibility and market reach.</p>
                                 </div>
                                 <div className="flat-toggle">
                                     <div className="h7 toggle-title">
@@ -729,25 +729,25 @@ const Token = () => {
 
                             <ul className="social">
                                 <li>
-                                    <a href="#"><i className="fa fa-paper-plane"></i></a>
+                                    <a href="https://t.me/+DP4Mts4HSLAzYTA8" target="_blank"><i className="fa fa-paper-plane"></i></a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com"><i className="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://x.com/gerbicoin" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i className="fa-brands fa-discord"></i></a>
+                                    <a href="https://discord.gg/9rgRafVn" target="_blank"><i className="fa-brands fa-discord"></i></a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com"><i className="fa-brands fa-youtube"></i></a>
+                                    <a href="https://youtube.com/@gerbicoin" target="_blank"><i className="fa-brands fa-youtube"></i></a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com"><i className="fa-brands fa-instagram"></i></a>
+                                    <a href="https://instagram.com/gerbi_io" target="_blank"><i className="fa-brands fa-instagram"></i></a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com"><i className="fa-brands fa-threads"></i></a>
+                                    <a href="https://threads.net/gerbi_io" target="_blank"><i className="fa-brands fa-threads"></i></a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com"><i className="fa-brands fa-medium"></i></a>
+                                    <a href="https://medium.com/@gerbicoin" target="_blank"><i className="fa-brands fa-medium"></i></a>
                                 </li>
                             </ul>
                         </div>

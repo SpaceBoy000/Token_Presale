@@ -19,8 +19,9 @@ function App() {
       <WalletContextProvider>
         <Web3Provider>
           <Routes>
-            <Route path="/sale" element={<Sale />} />
+            {/* <Route path="/sale" element={<Sale />} /> */}
             <Route path="/" element={<Token />} />
+            <Route path="/token" element={<Token />} />
           </Routes>
         </Web3Provider>
         <ToastContainer
