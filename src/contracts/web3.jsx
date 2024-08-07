@@ -27,7 +27,8 @@ import {
     getAccount
 } from "@solana/spl-token"
 
-const connection = new Connection(clusterApiUrl("devnet"));
+// const connection = new Connection(clusterApiUrl("devnet"));
+const connection = new Connection("https://dry-late-model.solana-mainnet.quiknode.pro/cb64f8ce1bde3fc9eb832bbfde2acffd6093875f");
 
 export const getProgram = (wallet) => {
     let provider = new anchor.AnchorProvider(
@@ -391,14 +392,4 @@ export const getIsPoolInitialized = async (tokenMint) => {
     } catch (e) {
         return false;
     }
-}
-
-export const convertToDecimal = (amount) => {
-    const integerStringValue = (parseFloat(amount) * 10 ** Constants.FRENS_DECIMALS).toFixed(0);
-    const stakingAmount = new BN(integerStringValue);
-    return stakingAmount
-}
-
-export const convertFromDecimal = (amount) => {
-    return amount / (10 ** Constants.FRENS_DECIMALS)
 }

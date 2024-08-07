@@ -1,9 +1,9 @@
 const config = {
-    startTime: 1722708000,
-    tokenPrice: 10000,
-    hardCap: 100, // 100 SOL
+    startTime: 1723075200,
+    tokenPrice: 20000,
+    hardCap: 9930, // 100 SOL
     admin: 'AuTTa5Jy8T8ymsmpnWMMsdSCBggb5iLZYFiSxr3zavkm',
-    authority: 'GfZNF2waJ736UYnU3mDs4xfxcN3HwDSdQ7RKR7gQeGN1',
+    authority: 'D8FzQonjEyK2rc14pHMaX2JHWLTdwD7cPj1bnUfytfz8',
 };
 
 export default config;

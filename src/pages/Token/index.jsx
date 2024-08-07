@@ -5,10 +5,25 @@ import config from "../../config";
 import { numberWithCommas } from "../../utils/method";
 import { web3_buy, web3_fund_tokens, web3_initialize, web3_start_sale, web3_withdraw, getContractBalance } from "../../contracts/web3";
 import { toast } from "react-toastify";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+
+const medias = [
+    "/assets/images/common/branda.png",
+    "/assets/images/common/brandb.png",
+    "/assets/images/common/brandc.png",
+    "/assets/images/common/brandd.png",
+    "/assets/images/common/brandf.png",
+    "/assets/images/common/brandg.png",
+    "/assets/images/common/brandh.png",
+    "/assets/images/common/brandi.png",
+    "/assets/images/common/brandj.png",
+]
 
 const Token = () => {
 
     const wallet = useWallet();
+    const carouselRef = useRef();
 
     const progressRef = useRef();
     const percentRef = useRef();
@@ -50,13 +65,15 @@ const Token = () => {
 
     const handleChangeAmount = (e) => {
         const amount = e.target.value;
-
-        setSolAmount(amount);
+        if (amount < 0) return;
+        console.log("amount: ", amount, Number(amount));
+        setSolAmount(Number(amount));
         setGerbiAmount(amount * config.tokenPrice);
     }
 
     const handleChangeTokenAmount = (e) => {
         const amount = e.target.value;
+        if (amount < 0) return;
 
         setGerbiAmount(amount);
         setSolAmount(amount / config.tokenPrice);
@@ -154,7 +171,7 @@ const Token = () => {
                             <h2 className="title rise-font"><span style={{ color: "#86FF00" }}>$GERBI</span> MemeCoin Presale</h2>
                         </div>
                         <div className="col-xl-6 col-lg-6 col-md-6 col-12 d-flex justify-content-center" style={{ marginBottom: "-100px" }}>
-                            <div className="wallet-form mt-5">
+                            <div className="wallet-form mt-5 sm:w-full">
                                 <div className="row">
                                     <div className="col-xl-9 col-9">
                                         <h4>Buy Before Price Rise</h4>
@@ -183,7 +200,8 @@ const Token = () => {
                                     </div>
                                 </div>
                                 <div className="spacing"></div>
-                                <div className="content_inner" data-aos="fade-left" data-aos-duration="1200">
+                                {/* <div className="content_inner" data-aos="fade-left" data-aos-duration="1200"> */}
+                                <div className="content_inner">
                                     <div className="wrapper">
                                         <ul className="price mb-3">
                                             <li> <span>1 $GERBI = {1 / config.tokenPrice} SOL</span>
@@ -204,8 +222,8 @@ const Token = () => {
                                 </div>
                                 <div className="project-info-form style mt-4">
                                     <div className="form-inner">
-                                        <div className="flex mb22">
-                                            <div className="col50 text-start">
+                                        <div className="flex mb22 sm:flex-col sm:gap-4 ml-4">
+                                            <div className="w-1/2 sm:w-full text-start ml-[10px]">
                                                 <label className="fz16 mb8 ms-1">
                                                     SOL You Pay
                                                 </label>
@@ -219,7 +237,7 @@ const Token = () => {
                                                     />
                                                 </fieldset>
                                             </div>
-                                            <div className="col50 text-start">
+                                            <div className="w-1/2 sm:w-full text-start ml-[10px]">
                                                 <label className="fz16 mb8 ms-1" for="code">
                                                     $GERBI You Receive
                                                 </label>
@@ -255,7 +273,7 @@ const Token = () => {
 
                         <div className="col-xl-6 col-lg-6 col-md-6 col-12 text-center">
                             <div className="row">
-                                <div className="col-md-12" style={{display: 'flex', justifyContent: 'center'}}>
+                                <div className="col-md-12" style={{ display: 'flex', justifyContent: 'center' }}>
                                     <img src="./assets/images/gerbicoins.png" className="img-fluid" style={{ maxHeight: "400px", width: "auto" }} />
                                 </div>
                                 <div className="col-md-12">
@@ -311,23 +329,43 @@ const Token = () => {
                     </div>
                 </div>
                 <div className="container w_1710 brand_wrapper">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="brand">
-                                <div className="swiper-container2 slider-12" data-aos="fade-in" data-aos-duration="1000">
-                                    <img className="mobmedia" src="/assets/images/common/branda.png" alt="" />
-                                    <img className="mobmedia" src="/assets/images/common/brandb.png" alt="" />
-                                    <img className="mobmedia" src="/assets/images/common/brandc.png" alt="" />
-                                    <img className="mobmedia" src="/assets/images/common/brandd.png" alt="" />
-                                    <img className="mobmedia" src="/assets/images/common/brandf.png" alt="" />
-                                    <img className="mobmedia" src="/assets/images/common/brandg.png" alt="" />
-                                    <img className="mobmedia" src="/assets/images/common/brandh.png" alt="" />
-                                    <img className="mobmedia" src="/assets/images/common/brandi.png" alt="" />
-                                    <img className="mobmedia" src="/assets/images/common/brandj.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <AliceCarousel
+                        key='guide-carousel'
+                        mouseTracking={true}
+                        autoWidth={true}
+                        items={
+                            medias.map((item, index) => {
+                                return (
+                                    <div className="py-2 !px-10 w-[240px]">
+                                        <div className="bg-card shadow-card p-2 rounded-lg flex flex-col gap-2 w-[200px] cursor-pointer" key={index}>
+                                            <div className="flex items-center gap-4">
+                                                <img className="mobmedia" src={item} alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })
+                        }
+                        infinite={true}
+                        disableDotsControls
+                        disableButtonsControls
+                        preventEventOnTouchMove={false}
+                        mouseTrackingEnabled={true}
+                        // responsive={{
+                        //     0: { items: 1 },
+                        //     500: { items: 2, itemsFit: "contain" },
+                        //     800: { items: 3, itemsFit: "contain" },
+                        //     980: { items: 4, itemsFit: "contain" },
+                        //     1280: { items: 5, itemsFit: "contain" },
+                        //     1480: { items: 6, itemsFit: "contain" },
+                        // }}
+                        ref={carouselRef}
+                        onSlideChange={(e) => {
+                        }}
+                        autoPlay={true}
+                        autoPlayInterval={2000}
+                        animationDuration={2000}
+                    />
                 </div>
             </section>
 
@@ -340,14 +378,16 @@ const Token = () => {
                             <div className="tf-title" data-aos="fade-up" data-aos-duration="800">
                                 <h2 className="title rise-font mt-5 mt-xl-1 mt-lg-1">
                                     TOKENOMICS </h2>
-                                <h4 className="tokenomics flex flex-row items-center gap-1" style={{ fontSize: '28px'}}>
+                                <h4 className="tokenomics flex sm:flex-col! items-center gap-1" style={{ fontSize: '28px' }}>
                                     <div className="whitespace-nowrap text-2xl">
                                         Total Supply:&nbsp;
                                     </div>
-                                    <div className="text-2xl">
-                                        1,000,000,000
+                                    <div className="flex items-center">
+                                        <div className="text-2xl">
+                                            1,000,000,000
+                                        </div>
+                                        <img src="./assets/images/gerbism2.png" style={{ width: "40px", height: '40px', marginTop: "-3px", marginLeft: "3px" }} />
                                     </div>
-                                    <img src="./assets/images/gerbism2.png" style={{ width: "40px", height: '40px', marginTop: "-3px", marginLeft: "3px"}} />
                                     <div className="text-2xl">
                                         $GERBI
                                     </div>
@@ -435,8 +475,8 @@ const Token = () => {
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <div className="image_cta" data-aos="fade-left" data-aos-duration="1200">
-                                <img className="move4" src="./assets/images/paper.png" alt="" />
+                            <div className="image_cta" data-aos="fade-right" data-aos-duration="1200">
+                                <img className="move4 sm:w-[80%] sm:left-[120px]" src="./assets/images/paper.png" alt="" />
                                 <img className="icon icon_1 mt-5 mt-xl-0 mt-lg-0 mt-md-0" src="./assets/images/gerbism2.png" width="70px" alt="" />
                                 <img className="icon icon_2" src="./assets/images/emo6.png" width="150px;" alt="" style={{ rotate: "130deg !important" }} />
                             </div>
