@@ -1,10 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./app.scss"
-// import "./app/swiper/swiper-bundle.min.css";
-// import "./app/dist/app.css";
 
-import Sale from "./pages/Sale";
 import Token from "./pages/Token";
 import { WalletContextProvider } from "./components/WalletContextProvider";
 import "@solana/wallet-adapter-react-ui/styles.css";
@@ -19,7 +16,6 @@ function App() {
       <WalletContextProvider>
         <Web3Provider>
           <Routes>
-            {/* <Route path="/sale" element={<Sale />} /> */}
             <Route path="/" element={<Token />} />
             <Route path="/token" element={<Token />} />
           </Routes>

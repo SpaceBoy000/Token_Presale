@@ -1,5 +1,5 @@
 const config = {
-    startTime: 1723075200,
+    startTime: 1724544000,
     tokenPrice: 20000,
     hardCap: 9930, // 100 SOL
     admin: 'AuTTa5Jy8T8ymsmpnWMMsdSCBggb5iLZYFiSxr3zavkm',

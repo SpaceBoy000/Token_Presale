@@ -769,13 +769,13 @@ const Token = () => {
 
                             <ul className="social">
                                 <li>
-                                    <a href="https://t.me/+DP4Mts4HSLAzYTA8" target="_blank"><i className="fa fa-paper-plane"></i></a>
+                                    <a href="https://t.me/+lALbt5Gkm9ZmNDU0" target="_blank"><i className="fa fa-paper-plane"></i></a>
                                 </li>
                                 <li>
                                     <a href="https://x.com/gerbicoin" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/9rgRafVn" target="_blank"><i className="fa-brands fa-discord"></i></a>
+                                    <a href="https://discord.gg/BM8vkXUwxM" target="_blank"><i className="fa-brands fa-discord"></i></a>
                                 </li>
                                 <li>
                                     <a href="https://youtube.com/@gerbicoin" target="_blank"><i className="fa-brands fa-youtube"></i></a>
